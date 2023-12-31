@@ -1,0 +1,778 @@
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: monospace, sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Container  */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header  */
+
+.header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 75px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #333;
+
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo i {
+  font-size: 30px;
+  color: rgb(227, 184, 115);
+}
+
+.popup {
+  display: none;
+}
+
+.header.active {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+/* Навигация */
+
+.nav__item {
+  font-size: 18px;
+  color: #fff;
+
+  padding: 10px 10px;
+}
+
+/* Бургер меню  */
+
+.menu-burger__header {
+  position: relative;
+  display: none;
+  width: 60px;
+  right: 50px;
+  height: 35px;
+  z-index: 1;
+
+  font-size: 0;
+  color: transparent;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-burger__header span,
+.menu-burger__header::after,
+.menu-burger__header::before {
+  height: 3px;
+  left: 10px;
+  width: 50px;
+  position: absolute;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.menu-burger__header span {
+  top: 16px;
+}
+
+.menu-burger__header:after,
+.menu-burger__header:before {
+  content: "";
+}
+
+.menu-burger__header:after {
+  bottom: 5px;
+}
+
+.menu-burger__header:before {
+  top: 5px;
+}
+
+.menu-burger__header.open-menu span {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu-burger__header.open-menu::before {
+  transform: rotate(35deg);
+  top: 16px;
+  transition: 0.4s;
+}
+
+.menu-burger__header.open-menu::after {
+  transform: rotate(-38deg);
+  bottom: 16px;
+  transition: 0.4s;
+}
+
+/* Интро  */
+
+.intro {
+  display: flex;
+  width: 100%;
+  height: 750px;
+  background-color: bisque;
+
+  padding-top: 100px;
+}
+
+.intro__photo {
+  margin-right: 60px;
+}
+
+.intro__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.intro__inner {
+  display: flex;
+  align-items: center;
+}
+
+.intro__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__name {
+  font-size: 60px;
+}
+
+/* Биография */
+
+.biography {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 300px;
+}
+
+.biography__inner {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.biography__title {
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+.biography__info {
+  font-size: 15px;
+}
+
+.biography__info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.space {
+  border: none;
+
+  height: 4px;
+  width: 100px;
+  margin-bottom: 20px;
+  background-color: rgb(227, 184, 115);
+}
+
+/* Опыт  */
+
+.experience {
+  height: 800px;
+
+  color: #fff;
+  background-color: #3d3d3d;
+}
+
+.experience__inner {
+  padding: 80px 0px;
+}
+
+.experience__item {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  padding: 0px 40px 0px 0px;
+}
+
+.experience__year {
+  position: relative;
+  border-right: 2px solid #fff;
+  padding-right: 100px;
+}
+
+.experience__info {
+  line-height: 1.4;
+}
+
+.experience__text {
+  margin: 0 0 40px 80px;
+}
+
+.dots {
+  position: absolute;
+  right: -6px;
+  top: 5px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+/* Достижения */
+
+.successes {
+  height: 500px;
+
+  padding: 60px 0px;
+}
+
+.successes__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.successes__item {
+  width: 48%;
+}
+
+.successes__photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  opacity: 0.3;
+
+  transition: scale 0.2s linear;
+}
+
+.successes__photo:hover {
+  opacity: 1;
+  scale: 1.1;
+}
+
+/* Навыки */
+
+.skills {
+  color: #fff;
+
+  background-color: #3d3d3d;
+}
+
+.skills__inner {
+  display: flex;
+
+  padding: 80px 0px;
+}
+
+.skill__description {
+  width: 60%;
+
+  margin-right: 50px;
+}
+
+.skill__title {
+  font-family: monospace, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.skill__info {
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+.skill__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+.skill__technolog {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: monospace, sans-serif;
+  color: rgb(69, 159, 255);
+
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+/************** Стили для названий технолгий **********/
+
+.javaScript {
+  color: yellow;
+}
+
+.html {
+  color: orangered;
+}
+
+.subhtml {
+  color: orange;
+}
+
+.subJavaScript {
+  color: rgb(69, 159, 255);
+}
+
+.fIrebase {
+  color: orange;
+}
+
+.subFIrebase {
+  color: yellow;
+}
+
+.css {
+  color: green;
+}
+
+.subcss {
+  color: blue;
+}
+
+/* Портфолио */
+
+.gallery {
+  height: auto;
+
+  padding: 60px 0px;
+}
+
+.gallery__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0;
+}
+
+.gallery__list li {
+  position: relative;
+  width: 45%;
+  display: inline-block;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border: 5px solid rgb(227, 184, 115);
+  box-shadow: 1px 3px 1px 0 rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.gallery__list img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery__info h3 {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 5px;
+}
+.gallery__info p {
+  color: rgb(227, 184, 115);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.gallery__info a {
+  display: block;
+  padding: 15px 30px;
+  color: rgb(227, 184, 115);
+  background: transparent;
+  border: 2px solid rgb(227, 184, 115);
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery__info a:hover {
+  background: rgb(227, 184, 115);
+  color: #fff;
+}
+
+.gallery__info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallery__list li:hover .gallery__info {
+  /* position: absolute; */
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.gallery__info {
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease-in-out;
+  transform: translate(0px, 300px) rotate(0deg);
+}
+
+.gallery__list li:hover .gallery__info {
+  transform: translate(0px, 0px) rotate(0deg);
+}
+
+/* Форма  */
+
+.contact {
+  height: 100%;
+
+  padding: 60px 0px;
+  background-color: #3d3d3d;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  width: 60%;
+}
+
+.contact__form input,
+textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+  background-color: #333;
+
+  font-size: 18px;
+  color: #fff;
+
+  border: none;
+  outline: none;
+}
+
+.contact__form textarea {
+  resize: vertical;
+}
+
+.contact__button {
+  width: 100px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+
+  padding: 8px;
+  border: 2px solid #fff;
+  margin: 0 auto;
+  transition: all 0.1s ease-in-out;
+}
+
+.contact__button:hover {
+  background-color: #fff;
+  color: #000000;
+}
+
+/* Подвал  */
+
+.footer {
+  height: 100%;
+
+  padding: 60px 0px;
+  background-color: #2c2c2c;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer__links {
+  margin-bottom: 30px;
+}
+
+.footer__links i {
+  color: rgb(227, 184, 115);
+  font-size: 30px;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer__links i:hover {
+  color: #3d3d3d;
+  background-color: rgb(227, 184, 115);
+}
+
+.footer__links i {
+  padding: 10px 12px;
+  margin-right: 10px;
+
+  border: 1px solid rgb(227, 184, 115);
+}
+
+.footer__inner h3 {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media (max-width: 1230px) {
+  /* Интро */
+
+  .intro__name {
+    margin-bottom: 50px;
+  }
+
+  .intro {
+    height: auto;
+  }
+
+  .intro__inner {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .intro__photo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Навыки  */
+
+  .skills {
+    height: auto;
+  }
+
+  .skill__technologies {
+    text-align: center;
+    width: 35%;
+  }
+  .skill__technolog {
+    height: auto;
+  }
+
+  /* Достижения  */
+
+  .successes {
+    height: auto;
+  }
+
+  .successes__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .successes__item {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  /* Портфолио */
+
+  .gallery__list li {
+    width: 70%;
+  }
+}
+
+@media (max-width: 990px) {
+  /* Навигация  */
+
+  .nav {
+    position: absolute;
+    width: 260px;
+    right: 0;
+    top: -290px;
+    background-color: #333;
+    padding: 90px 20px 20px 20px;
+    transition: 0.3s;
+  }
+
+  .nav__item {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .header.open .nav {
+    top: 0;
+  }
+
+  .header.open .nav__item {
+    border-bottom: 2px solid #fff;
+  }
+
+  /* Биография  */
+
+  .biography {
+    padding: 15px 0px;
+    height: auto;
+  }
+
+  .biography__title {
+    font-size: 35px;
+  }
+
+  /* Образование  */
+
+  .experience {
+    height: auto;
+  }
+
+  .experience__title {
+    font-size: 35px;
+  }
+
+  .experience__info {
+    display: flex;
+    margin-left: 20px;
+    flex-wrap: wrap;
+  }
+
+  .experience__year {
+    padding-right: 80px;
+  }
+
+  /* Галерея  */
+
+  .gallery__title {
+    font-size: 35px;
+  }
+  .gallery__list li {
+    width: 80%;
+  }
+
+  /* Достижения  */
+  /* ssdsd */
+  .successes__title {
+    font-size: 35px;
+  }
+
+  .contact__title {
+    font-size: 35px;
+  }
+
+  /* Меню */
+
+  .menu-burger__header {
+    display: block;
+  }
+
+  .menu-burger__header.open-menu .nav {
+    display: block;
+  }
+}
+
+@media (max-width: 770px) {
+  /* Образование  */
+
+  .experience__year {
+    padding-right: 50px;
+  }
+
+  .experience__text {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  /* Интро  */
+
+  .intro__name {
+    font-size: 40px;
+  }
+
+  /* Образование  */
+
+  .experience__year {
+    font-weight: 700;
+
+    border: none;
+  }
+
+  .experience__text {
+    margin-left: 0;
+  }
+
+  .experience__item {
+    display: block;
+  }
+
+  .dots {
+    display: none;
+  }
+
+  /* Биография */
+
+  .biography {
+    height: 590px;
+  }
+
+  /* Навыки */
+
+  .skills__inner {
+    flex-direction: column;
+  }
+
+  .skill__title {
+    font-size: 35px;
+  }
+
+  .skill__description {
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+
+  .skill__technologies {
+    width: 100%;
+  }
+
+  .skill__technolog {
+    font-size: 20px;
+  }
+}
