@@ -53,15 +53,17 @@
             <hr class="space" />
             <div class="biography__info">
               <p>
-                I want to develop in the IT field: improve my skills in order to create and improve products and services.
+                I want to develop in the IT field: improve my skills in order to
+                create and improve products and services.
               </p>
               <p>
-                He graduated from the courses "Java Basics" and "Git version control system".
-                But after one year I decided to develop websites in HTML
-                and CSS. In the process of searching for optimal ways to study
-                the direction of "Frontend developer", I decided to take a course at school
-                Hexlet programming. I am currently developing
-                own projects to improve your skills.</p>
+                He graduated from the courses "Java Basics" and "Git version
+                control system". But after one year I decided to develop
+                websites in HTML and CSS. In the process of searching for
+                optimal ways to study the direction of "Frontend developer", I
+                decided to take a course at school Hexlet programming. I am
+                currently developing own projects to improve your skills.
+              </p>
             </div>
           </div>
         </div>
@@ -79,11 +81,12 @@
                   <div class="dots"></div>
                 </div>
                 <div class="experience__text">
-                  I currently work for a large IT company under
-                  the name "Contour" as a sales manager. My
-                  the job involves negotiating with clients,
-                  development and implementation of sales strategies, as well as the search for new ones
-                  partners and the development of mutually beneficial relationships.</div>
+                  I currently work for a large IT company under the name
+                  "Contour" as a sales manager. My the job involves negotiating
+                  with clients, development and implementation of sales
+                  strategies, as well as the search for new ones partners and
+                  the development of mutually beneficial relationships.
+                </div>
               </div>
 
               <div class="experience__item">
@@ -92,15 +95,15 @@
                   <div class="dots"></div>
                 </div>
                 <div class="experience__text">
-                  Over the past two years, I have worked hard as a
-                  a specialist in concluding contracts in JSC "Management Company
-                  waste management in the Leningrad region". My job
-                  it allowed me to deepen my knowledge in the field of legislation,
-                  regulating relations between housing and communal services
-                  enterprises. I have been actively involved in the development and conclusion
-                  contracts for the maintenance of houses and apartments, management
-                  communal infrastructure and other aspects related to
-                  Housing AND communal services.
+                  Over the past two years, I have worked hard as a a specialist
+                  in concluding contracts in JSC "Management Company waste
+                  management in the Leningrad region". My job it allowed me to
+                  deepen my knowledge in the field of legislation, regulating
+                  relations between housing and communal services enterprises. I
+                  have been actively involved in the development and conclusion
+                  contracts for the maintenance of houses and apartments,
+                  management communal infrastructure and other aspects related
+                  to Housing AND communal services.
                 </div>
               </div>
 
@@ -110,11 +113,13 @@
                   <div class="dots"></div>
                 </div>
                 <div class="experience__text">
-                  I have been working hard for the last six months
-                  A human resources specialist at GSR Work. During
-this time, I have gained valuable experience in the field of recruitment, training and
-                  personnel development, labor relations management, and
-                  in the development and implementation of HR strategy.</div>
+                  I have been working hard for the last six months A human
+                  resources specialist at GSR Work. During this time, I have
+                  gained valuable experience in the field of recruitment,
+                  training and personnel development, labor relations
+                  management, and in the development and implementation of HR
+                  strategy.
+                </div>
               </div>
 
               <div class="experience__item">
@@ -123,11 +128,12 @@ this time, I have gained valuable experience in the field of recruitment, traini
                   <div class="dots"></div>
                 </div>
                 <div class="experience__text">
-                  I have successfully graduated from the Academy of Urban Environment Management,
-                  urban Planning and Printing" majoring in finance. 
-During my studies, I deepened my knowledge in the field of financial
-                  management, investment analysis, accounting and others
-                  key aspects of financial activity.</div>
+                  I have successfully graduated from the Academy of Urban
+                  Environment Management, urban Planning and Printing" majoring
+                  in finance. During my studies, I deepened my knowledge in the
+                  field of financial management, investment analysis, accounting
+                  and others key aspects of financial activity.
+                </div>
               </div>
             </div>
           </div>
@@ -275,13 +281,20 @@ During my studies, I deepened my knowledge in the field of financial
           <hr class="space" />
 
           <div class="contact__inner">
-            <form class="contact__form" id="contact-form">
-              <input placeholder="Name" type="text" name="name" required="" />
+            <form class="contact__form" id="contact-form" method="post">
               <input
+                class="input"
+                placeholder="Name"
+                type="text"
+                name="name"
+                required
+              />
+              <input
+                class="input"
                 placeholder="Enter email"
                 type="email"
                 name="email"
-                required=""
+                required
               />
               <textarea
                 placeholder="Your Message"
@@ -289,12 +302,8 @@ During my studies, I deepened my knowledge in the field of financial
                 name="message"
                 rows="10"
               ></textarea>
-              <!-- <div id="success">
-                    <div>
-                      Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span>
-                    </div>
-                  </div> -->
-              <button class="contact__button" type="submit" id="submit">
+              <div id="loader" class="hidden">Отправляем...</div>
+              <button id="button_form" class="contact__button" type="submit" id="submit">
                 SUBMIT
               </button>
             </form>
